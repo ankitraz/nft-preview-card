@@ -33,23 +33,48 @@ body {
 
 
 .card {
- 
     width: 35rem;
     border-radius: 1.5rem;
     background-color: $primary-color;
     box-shadow: $body-background-color 0px 7px 29px 0px;
     overflow: hidden;
-    .card__header {
-        overflow: hidden;
-        img {
-            border-radius: 3.5rem;
-            padding: 2.5rem;
-            width: 100%;
-        }
-        position: relative;
-        
 
+
+    .card__header {
+        position: relative;
+        overflow: hidden;
+        margin: 2.5rem;
+
+        .main-img{
+            border-radius: 1.5rem;
+            width: 100%;
+            transform: translateY(0.8%);
+        }
+
+        .eye_container {
+            position: absolute;
+            background-color: hsla(178, 100%, 50%, 0.332);
+            top: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            border-radius: 1.5rem;
+            transition: 0.3s;
+            
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &:hover {
+                opacity: 1;
+                cursor: pointer;
+            }
+        }    
     }
+
 
     .card__body {
         padding: 2.5rem;
